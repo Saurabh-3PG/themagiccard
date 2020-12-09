@@ -1,0 +1,81 @@
+.fliters {
+    margin-top: 1rem;
+    ul {
+        list-style: none;
+        margin: 0 0 46px;
+        padding: 0;
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        li {
+            width: 50%;
+            padding: 4px;
+            button {
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        background: #212121;
+        left: 0;
+        right: 0;
+        top: -200%;
+        height: calc(100% - 112px);
+        overflow: scroll;
+        padding: 18em;
+        transition: ease all .75s;
+        h1{
+            margin-block-start: 0em;
+        }
+    }
+    .textField{
+        div{
+            min-height: 56px;
+        }
+    }
+}
+.filterOpen{
+    .fliters{
+        transition: ease all .75s;
+        top: 56px;
+    }
+}
+.IntroCard_container{
+    padding-bottom: 1.2rem;
+    @media (min-width: 600px){padding-left: 1.2rem;}
+    @media (max-width: 600px){
+        &:nth-child(2n){
+            padding-left: 1.2rem;
+        }
+    }
+}
+.dark{
+    .MuiPaginationItem-root{
+        color: rgba(255,255,255,1);
+    }
+    .textField {
+        color:  rgba(255,255,255,1);
+        >*, >*:hover, input, button{
+            color: rgba(255,255,255,1);
+            border-color: #f50057;
+        }
+    }
+}
+.light{
+    .textField {
+        color: #212121;
+        >*, >*:hover, input, button{
+            color: #212121;
+            border-color: #212121;
+        }
+    }
+    .MuiPaginationItem-root{
+        color: #212121;
+        &.Mui-selected{
+            color: rgba(255,255,255,1);
+        }
+    }
+}

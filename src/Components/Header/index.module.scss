@@ -1,0 +1,35 @@
+.Header{
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.SiteLogo{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    opacity: .85;
+    &:hover{
+        opacity: 1;
+    }
+}
+.SearchInput{
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid #ccc;
+    padding: 4px 32px;
+    border-radius: 100px;
+    transition: ease all .5s;
+    color: inherit !important;
+    &:hover, &:focus{
+        box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.1);
+        border-color: #f50057;
+    }
+}

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from "react";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import PageRoute from "./PageRoute";
+import {ThemeProvider, themes} from './Context/theme'
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.toggleTheme = () => {
+      this.setState(state => ({
+        theme:
+          state.theme === themes.dark
+            ? themes.light
+            : themes.dark,
+      }));
+    }
+    this.state = {
+      theme: themes.dark,
+      toggleTheme: this.toggleTheme,
+    }
+  }
+  render () {
+    return (
+      <ThemeProvider value={this.state}>
+        <CssBaseline />
+        <PageRoute />
+      </ThemeProvider>
+    );
+  }
 }
 
 export default App;

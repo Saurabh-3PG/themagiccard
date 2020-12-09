@@ -1,0 +1,36 @@
+.card {
+    &Heading {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 32px;
+        display: flex;
+        text-decoration: none;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        transition: ease all .75s;
+        overflow: hidden;
+        > span:first-child {
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            width: auto;
+            height: auto;
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            line-height: 1;
+        }
+    }
+    &:hover{
+        .cardHeading{
+            width: 100%;
+            transition: ease all .75s;
+        }
+    }
+    &Description {
+        height: 124px;
+        overflow: hidden;
+        @include ellipsis(5);
+    }
+}

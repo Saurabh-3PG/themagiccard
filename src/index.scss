@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+:root{
+    font-size: 8px;
+    @media (min-width: 600px) {
+      font-size: 10px;
+    }
+    @media (min-width: 960px) {
+      font-size: 12px;
+    }
+    @media (min-width: 1280px) {
+      font-size: 14px;
+    }
+    @media (min-width: 1920px) {
+      font-size: 16px;
+    }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+  fieldset{
+    min-height: 100%;
+    color: inherit;
+    border-color: inherit !important;
+  }
+  @import "./utility/Scss/index.scss";
+  
+  @import "./Components/Cards/IntroCard.scss";
+  @import "./Components/Loader/index.scss";
+
+  @import "./Pages/Home/index.scss";
+  @import "./Pages/CardDetails/index.scss";
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
