@@ -20,7 +20,7 @@ const initialState = {
 
 // Common
 const setLang = (state, action) => {
-  console.log('Language Set')
+  console.log("Language Set");
   return objectUpdater(state, { lang: action.lang });
 };
 const startFetching = (state, action) => {
