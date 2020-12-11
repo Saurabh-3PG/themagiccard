@@ -25,7 +25,7 @@ class Footer extends React.Component {
             direction="row"
             alignItems="center"
           >
-            <Grid container item xs={12} sm={2}>
+            <Grid container item xs={12} sm={5} md={4}>
               <Typography
                 component="p"
                 align="left"
@@ -37,10 +37,10 @@ class Footer extends React.Component {
                 Designed & Developed by - Saurabh Anand
               </Typography>
             </Grid>
-            <Grid container item alignItems="center" justify="center" xs={12} sm={8}>
+            <Grid container item alignItems="center" justify="center" xs={12} sm={7} md={4}>
               {footerMiddleChild}
             </Grid>
-            <Grid container item xs={2}>
+            <Grid container item xs={12} sm={12} md={4}>
                 {footerChildren}
             </Grid>
           </Grid>
