@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorCard app component 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-1 ErrorCard"
+  id="ErrorCard_ErrorCard"
+  style={
+    Object {
+      "maxWidth": "100%",
+    }
+  }
+>
+  <h2
+    className="MuiTypography-root font fontBold fontSize_xl m_before_xxxl m_after_xxxl MuiTypography-body1"
+    style={
+      Object {
+        "alignItems": "center",
+        "boxShadow": "2px 4px 12px -4px rgb(0, 0, 0, 0.42)",
+        "color": "red",
+        "display": "flex",
+        "justifyContent": "center",
+        "maxWidth": "100%",
+        "minHeight": "150px",
+        "padding": "64px",
+        "textAlign": "center",
+        "width": "640px",
+      }
+    }
+  >
+    No is no result found for the selected filter, Please change filter or use clear filter reaset it.
+  </h2>
+</div>
+`;
