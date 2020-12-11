@@ -13,9 +13,16 @@ class App extends React.Component {
             : themes.dark,
       }));
     }
+    this.toggleFilter = () => {
+      this.setState(state => ({
+        isFilterOpen: state.isFilterOpen === false ? true : false
+      }));
+    }
     this.state = {
       theme: themes.dark,
+      isFilterOpen: false,
       toggleTheme: this.toggleTheme,
+      toggleFilter: this.toggleFilter,
     }
   }
   render () {

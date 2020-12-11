@@ -25,18 +25,19 @@ class Footer extends React.Component {
             direction="row"
             alignItems="center"
           >
-            <Grid container item xs={2}>
+            <Grid container item xs={12} sm={2}>
               <Typography
-                component="div"
+                component="p"
                 align="left"
                 className={`font fontMedium fontSize_sm`}
                 color="secondary"
                 display="block"
+                style={{width: '100%'}}
               >
                 Designed & Developed by - Saurabh Anand
               </Typography>
             </Grid>
-            <Grid container item alignItems="center" justify="center" xs={8}>
+            <Grid container item alignItems="center" justify="center" xs={12} sm={8}>
               {footerMiddleChild}
             </Grid>
             <Grid container item xs={2}>

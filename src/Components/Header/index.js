@@ -21,7 +21,7 @@ class Header extends React.Component {
     return (
       <ThemeConsumer>
         {
-          ({theme, toggleTheme}) => {
+          ({isFilterOpen, theme, toggleTheme, toggleFilter}) => {
             return (
               <header
                 className={`${uniqueId} header ${classes.Header}`}
@@ -41,12 +41,14 @@ class Header extends React.Component {
                   >
                     <Grid
                       item
-                      xs={4}
+                      xs={3}
+                      sm={3}
+                      md={4}
                       container
                       alignItems="center"
                       justify="flex-start"
                     >
-                      <DashboardIcon fontSize="default" color="secondary" />
+                      <DashboardIcon fontSize="default" color="secondary" className={`${classes.DashboardIcon}`} onClick={toggleFilter} />
                       <Link to="/home" className={`${classes.SiteLogo}`}>
                             <Typography
                               component="h1"
@@ -58,7 +60,11 @@ class Header extends React.Component {
                             </Typography>
                       </Link>
                     </Grid>
-                    <Grid item xs={4} container alignItems="center" justify="center">
+                    <Grid item 
+                      xs={7}
+                      sm={6}
+                      md={4}
+                      container alignItems="center" justify="center">
                       {
                         searchHandler 
                         ? <InputBase
@@ -75,16 +81,18 @@ class Header extends React.Component {
                             } ) }
                             onKeyDown={(event) => {
                                 if(event.key === 'Enter'){
-                                  console.log('event>>>>', 'event.key', event.key, 'this.state.searchText', this.state.searchText)
                                   searchHandler(this.state.searchText, 'name')
                                 }
-
                             } }
                           />
                         : null
                       }
                     </Grid>
-                    <Grid item xs={4} container alignItems="center" justify="flex-end">
+                    <Grid item 
+                      xs={2}
+                      sm={3}
+                      md={4}
+                      container alignItems="center" justify="flex-end">
                       <Switch
                         checked={theme.mode === "dark"}
                         onChange={toggleTheme}

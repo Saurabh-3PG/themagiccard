@@ -7,7 +7,15 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 9;
+}
+.home_page_header{
+    >.home_page_header_maxWidth{
+    @media (max-width: 600px) {
+        padding-left: 4px;
+        padding-right: 4px;
+    }   
+    }
 }
 .SiteLogo{
     text-transform: uppercase;
@@ -31,5 +39,12 @@
     &:hover, &:focus{
         box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.1);
         border-color: #f50057;
+    }
+}
+.DashboardIcon{
+    display: none !important;
+    cursor: pointer;
+    @media (max-width: 600px) {
+        display: block !important;
     }
 }

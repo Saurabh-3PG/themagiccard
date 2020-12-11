@@ -11,46 +11,22 @@ import ErrorCard from '../../Components/Cards/ErrorCard'
 import { connect } from "react-redux";
 import axios from "../../utility/axios";
 import * as actions from "../../store/actions/allCards";
+import {ThemeContext} from "../../Context/theme";
 
 import { 
   Grid, 
   Button,
   Box, 
   Typography,
-  // TextField
 } from "@material-ui/core";
-// import Checkbox from '@material-ui/core/Checkbox';
-// import Autocomplete from '@material-ui/lab/Autocomplete';
+
 import Pagination from '@material-ui/lab/Pagination';
-// import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
-// import CheckBoxIcon from '@material-ui/icons/CheckBox';
-// import { withStyles } from "@material-ui/core/styles";
 
 import {
-  // supertypes,
-  // colors,
-  // rarity,
-  // pageSize,
   NONE_TEXT,
   HOMEPAFE_DISCLAIMER_TEXTS,
   FILTERS
 } from "../../utility/constants";
-
-// import { arrayUpdater, isSameArray } from "../../utility/methods";
-
-// const styles = (theme) => ({
-//   root: {
-//     width: "100%",
-//   },
-//   colorBox: {
-//     marginTop: '28px',
-//     width: "100%",
-//   },
-//   colorInput: {},
-//   textField: {
-//     minHeight: '56px'
-//   }
-// });
 
 class Home extends React.Component {
   constructor(props) {
@@ -68,7 +44,6 @@ class Home extends React.Component {
         name: null
       },
     };
-    // this.onClickHandler = this.onClickHandler.bind(this);
   }
   componentDidMount() {
     this.props.onFetchCards(this.state.lang, {
@@ -80,24 +55,6 @@ class Home extends React.Component {
       name: null
     });
   }
-
-  // onClickHandler(event, color) {
-  //   event.preventDefault();
-  //   event.stopPropagation();
-  //   let newColors;
-  //   if (!this.state.colors.includes(color)) {
-  //     newColors = this.state.colors.concat(color);
-  //     this.setState({ colors: newColors });
-  //     this.props.onFetchCards(
-  //       this.state.lang,
-  //       newColors,
-  //       this.state.supertypes
-  //     );
-  //   } else {
-  //     newColors = this.state.colors;
-  //     this.setState({ colors: newColors });
-  //   }
-  // }
   
   clearFilter() {
     this.setState(
@@ -147,6 +104,8 @@ class Home extends React.Component {
   
   render() {
     const pageID = "home";
+    const $thisContent = this.context;
+    console.log($thisContent, '<<<<<<<<<<$thisContent')
     return (
       <>
         <PageWrapper
@@ -158,10 +117,10 @@ class Home extends React.Component {
                 onChange={this.handleChangePagination}
                 count={Math.ceil(parseInt(this.props.totalCount) / this.props.filter.pageSize)}
                 color="secondary"
-                size="medium"
+                size="small"
                 className={"font fontBold fontSize_sm"}
-                boundaryCount={1}
-                showFirstButton showLastButton
+                boundaryCount={1} 
+                showLastButton
               />
             )
           }
@@ -173,7 +132,13 @@ class Home extends React.Component {
         >
           <MaxWidth componentID={pageID}>
             <Grid container direction="row" alignItems="flex-start">
-              <Grid className="fliters" item xs={12} sm={4} md={3} lg={2}>
+              <Grid 
+                className={`${$thisContent.isFilterOpen ? 'isOpen' : 'isClose'} fliters`} 
+                item xs={12} sm={4} md={3} lg={2}
+                style={{
+                  background: $thisContent.theme.middleground
+                }}
+              >
                 <Box
                   style={{
                     display: "flex",
@@ -251,14 +216,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // onSetColor: (color) => dispatch(actions.setLang({ lang: lang})),
     onFetchCards: (lang, filters) => dispatch(actions.fetchCards(lang, filters)),
-    // onSetPage: (lang, filters) => dispatch(actions.fetchCards()),
   };
 };
 
 // export default withStyles(styles)(
 //   connect(mapStateToProps, mapDispatchToProps)(Home, axios)
 // )
-
+Home.contextType = ThemeContext;
 export default connect(mapStateToProps, mapDispatchToProps)(Home, axios);

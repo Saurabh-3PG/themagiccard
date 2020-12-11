@@ -16,8 +16,10 @@ export const themes = {
 };
 
 export const ThemeContext = React.createContext({
+  isFilterOpen: false,
   theme: themes.dark,
   toggleTheme: () => {},
+  toggleFilter: () => {}
 });
 const ThemeProvider = ThemeContext.Provider;
 const ThemeConsumer = ThemeContext.Consumer;

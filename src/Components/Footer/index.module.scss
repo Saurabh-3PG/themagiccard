@@ -3,9 +3,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 9;
     box-shadow: 2px -4px 8px rgba(0, 0, 0, 0.25);
 }
 .Footer .FooterContent{
     min-height: 56px;
+    @media (max-width: 600px) {
+        *{text-align: center;}
+    }
 }
