@@ -30,8 +30,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "updateJsdoc": "jsdoc \"src/App.js\"",
+    "updateReadme": "jsdoc2md \"src/App.js\"",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "checkLinting": "eslint \"src/**/*.{js,jsx}\""
   },
   "eslintConfig": {
     "extends": [

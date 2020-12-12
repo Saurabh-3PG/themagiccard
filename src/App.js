@@ -2,6 +2,7 @@ import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import PageRoute from "./PageRoute";
 import {ThemeProvider, themes} from "./Context/theme";
+/** Class representing a point. */
 class App extends React.Component {
   constructor(props) {
     super(props);

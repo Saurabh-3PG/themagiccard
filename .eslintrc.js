@@ -19,7 +19,7 @@ module.exports = {
     ],
     "rules": {
         "semi": ["error", "always"],
-        "quotes": ["error", "double"],
+        // "quotes": ["error", "double"],
         "constructor-super": 2,
         "for-direction": 2,
         "getter-return": 2,

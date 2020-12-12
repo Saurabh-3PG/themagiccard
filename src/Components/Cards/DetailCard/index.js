@@ -1,7 +1,10 @@
 import React from "react";
 import { Grid, Box, Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
-
+/**
+ * Represents a book.
+ * @constructor
+ */
 const DetailCard = (props) => {
   const { componentID, details, lang } = props;
   const uniqueId = componentID + "_DetailCard";
