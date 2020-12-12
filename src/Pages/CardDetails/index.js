@@ -16,9 +16,9 @@ function CardDetails() {
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   React.useEffect(() => {
-    if(slug) dispatch(actions.fetchCardDetails(slug))
+    if(slug) dispatch(actions.fetchCardDetails(slug));
     return () => {
-        dispatch(cleanUp())
+        dispatch(cleanUp());
     };
   }, [slug, dispatch]);
 

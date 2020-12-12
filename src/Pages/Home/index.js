@@ -5,9 +5,9 @@ import MaxWidth from "../../Components/MaxWidth";
 import Loader from "../../Components/Loader";
 import Disclaimer from "../../Components/Disclaimer";
 import IntroCard from "../../Components/Cards/IntroCard";
-import Filters from '../../Components/Filters';
-import ErrorCard from '../../Components/Cards/ErrorCard'
-
+import Filters from "../../Components/Filters";
+import ErrorCard from "../../Components/Cards/ErrorCard";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import axios from "../../utility/axios";
 import * as actions from "../../store/actions/allCards";
@@ -20,7 +20,7 @@ import {
   Typography,
 } from "@material-ui/core";
 
-import Pagination from '@material-ui/lab/Pagination';
+import Pagination from "@material-ui/lab/Pagination";
 
 import {
   NONE_TEXT,
@@ -105,7 +105,7 @@ class Home extends React.Component {
   render() {
     const pageID = "home";
     const $thisContent = this.context;
-    console.log($thisContent, '<<<<<<<<<<$thisContent')
+
     return (
       <>
         <PageWrapper
@@ -126,14 +126,14 @@ class Home extends React.Component {
           }
           searchHandler={
             (value, type) => {
-              this.setFilter(value , type )
+              this.setFilter(value , type);
             }
           }
         >
           <MaxWidth componentID={pageID}>
             <Grid container direction="row" alignItems="flex-start">
               <Grid 
-                className={`${$thisContent.isFilterOpen ? 'isOpen' : 'isClose'} fliters`} 
+                className={`${$thisContent.isFilterOpen ? "isOpen" : "isClose"} fliters`} 
                 item xs={12} sm={4} md={3} lg={2}
                 style={{
                   background: $thisContent.theme.middleground
@@ -160,7 +160,7 @@ class Home extends React.Component {
               </Box>
 
                 <Filters componentID={pageID} filters={FILTERS} onChangeHandler={(event, value, type) => { 
-                  if(type === 'colors'){
+                  if(type === "colors"){
                     this.setFilter( value === NONE_TEXT ? null  : value.map((val) => val) , type );
                   }
                   else {
@@ -220,6 +220,14 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
+Home.propTypes = {
+  onFetchCards: PropTypes.func,
+  cards: PropTypes.object,
+  lang: PropTypes.string,
+  loading: PropTypes.bool,
+  totalCount: PropTypes.number,
+  filter: PropTypes.object,
+};
 // export default withStyles(styles)(
 //   connect(mapStateToProps, mapDispatchToProps)(Home, axios)
 // )

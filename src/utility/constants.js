@@ -2,10 +2,10 @@ export const NONE_TEXT = "None";
 export const HOMEPAFE_DISCLAIMER_TEXTS = [
   {
     text:
-      'Default color is "Cyan" - This is being used if no color is coming from API.',
+      "Default color is \"Cyan\" - This is being used if no color is coming from API.",
   },
 ];
-export const ERROR_MSG = 'No is no result found for the selected filter, Please change filter or use clear filter reaset it.'
+export const ERROR_MSG = "No is no result found for the selected filter, Please change filter or use clear filter reaset it.";
 export const FILTERS = [
   {
     options: [
@@ -45,13 +45,13 @@ export const FILTERS = [
   },
   {
     options: [
-      '10',
-      '12',
-      '25', 
-      '50', 
-      '60'
+      "10",
+      "12",
+      "25", 
+      "50", 
+      "60"
     ],
     type: "pageSize",
     label: "Page Size"
   }
-]
+];

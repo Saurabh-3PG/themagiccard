@@ -23,18 +23,18 @@ const setLang = (state, action) => {
   console.log("Language Set");
   return objectUpdater(state, { lang: action.lang });
 };
-const startFetching = (state, action) => {
-  console.log('Started Card Details Fetching')
+const startFetching = (state) => {
+  console.log("Started Card Details Fetching");
   return objectUpdater(state, { loading: true });
 };
-const fetchingFailed = (state, action) => {
-  console.log('Card Details Fetching Failed')
+const fetchingFailed = (state) => {
+  console.log("Card Details Fetching Failed");
   return objectUpdater(state, { loading: true });
 };
 
 // Clean Up
-const cleanUp = (state, action) => {
-  console.log('Card Details History Clean Up Is Complete')
+const cleanUp = (state) => {
+  console.log("Card Details History Clean Up Is Complete");
   return objectUpdater(state, {
     cardDetailsID: null,
     cardDetails: null,
@@ -44,7 +44,7 @@ const cleanUp = (state, action) => {
 
 // Card Details
 const setCardDetails = (state, action) => {
-  console.log('Card Details Updated')
+  console.log("Card Details Updated");
   return objectUpdater(state, {
     cardDetailsID: action.cardDetailsID,
     cardDetails: action.cardDetails,
@@ -53,7 +53,7 @@ const setCardDetails = (state, action) => {
 };
 
 const fetchingCartSuccess = (state, action) => {
-  console.log('Fetching Carts Done')
+  console.log("Fetching Carts Done");
   const newFilters = objectUpdater(state.filter, action.filter);
   return objectUpdater(state, {
     cards: action.cards,
@@ -69,11 +69,11 @@ const reducer = (state = initialState, action) => {
     case actionTypes.SET_LANG:
       return setLang(state, action);
     case actionTypes.FETCH_START:
-      return startFetching(state, action);
+      return startFetching(state);
     case actionTypes.FETCH_FAILED:
-      return fetchingFailed(state, action);
+      return fetchingFailed(state);
     case actionTypes.CLEAN_UP:
-      return cleanUp(state, action);
+      return cleanUp(state);
     case actionTypes.FETCH_CARDS_SUCCESS:
       return fetchingCartSuccess(state, action);
     case actionTypes.SET_CARDDETAILS:

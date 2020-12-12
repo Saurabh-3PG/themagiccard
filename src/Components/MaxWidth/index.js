@@ -19,4 +19,6 @@ export default function MaxWidth(props) {
 }
 MaxWidth.propTypes = {
   componentID: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  maxWidth: PropTypes.string
 };

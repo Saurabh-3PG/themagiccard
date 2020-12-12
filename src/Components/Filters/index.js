@@ -1,10 +1,10 @@
 import React from "react";
-
 import { Box, TextField } from "@material-ui/core";
 import Checkbox from "@material-ui/core/Checkbox";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@material-ui/icons/CheckBox";
+import PropTypes from "prop-types";
 
 const Filters = (props) => {
   const { componentID, filters, onChangeHandler } = props;
@@ -18,7 +18,7 @@ const Filters = (props) => {
             return (
               <Box key={uniqueID + "_" + index} className="font fontNormal fontSize_md m_before_sm" id={uniqueID + "_" + index}>
                 <Autocomplete
-                  multiple={filter.type === 'colors' ? true : false}
+                  multiple={filter.type === "colors" ? true : false}
                   id={uniqueID + "_" + index + "_autoComplete"}
                   options={filter.options}
                   disableCloseOnSelect
@@ -38,10 +38,10 @@ const Filters = (props) => {
                       {value}
                     </React.Fragment>
                   )}
-                  // style={{ width: '100%', minHeight: 56 }}
+                  // style={{ width: "100%", minHeight: 56 }}
                   renderInput={(params) => (
                     <TextField
-                      className={`textField`}
+                      className="textField"
                       {...params}
                       variant="outlined"
                       label={filter.label}
@@ -56,4 +56,11 @@ const Filters = (props) => {
     </Box>
   );
 };
+
+Filters.propTypes = {
+  componentID: PropTypes.string.isRequired,
+  filters: PropTypes.array,
+  onChangeHandler: PropTypes.func
+};
+
 export default Filters;

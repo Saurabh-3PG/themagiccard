@@ -1,6 +1,6 @@
 import * as actionTypes from "./types";
 import axios from "../../utility/axios";
-import {startFetching , fetchingFailed} from './index';
+import {startFetching , fetchingFailed} from "./index";
 
 export const setCartDetails = (details, id) => {
   return {
@@ -17,7 +17,6 @@ export const fetchCardDetails = (id) => {
     axios
       .get(apiUrl)
       .then((response) => {
-        console.log('apiUrl>>>', apiUrl)
         dispatch(setCartDetails(response.data.card, id));
       })
       .catch((err) => {

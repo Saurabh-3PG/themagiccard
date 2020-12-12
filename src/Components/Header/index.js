@@ -2,18 +2,18 @@ import React from "react";
 // import { ThemeContext } from "../../Context/theme";
 import {ThemeConsumer} from "../../Context/theme";
 import { Grid, Typography, InputBase } from "@material-ui/core";
-import DashboardIcon from '@material-ui/icons/Dashboard';
+import DashboardIcon from "@material-ui/icons/Dashboard";
 import classes from "./index.module.scss";
 import MaxWidth from "../MaxWidth";
 import Switch from "@material-ui/core/Switch";
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      searchText: ''
-    }
+      searchText: ""
+    };
   }
   render() {
     const { componentID, searchHandler } = this.props;
@@ -21,7 +21,7 @@ class Header extends React.Component {
     return (
       <ThemeConsumer>
         {
-          ({isFilterOpen, theme, toggleTheme, toggleFilter}) => {
+          ({theme, toggleTheme, toggleFilter}) => {
             return (
               <header
                 className={`${uniqueId} header ${classes.Header}`}
@@ -54,7 +54,7 @@ class Header extends React.Component {
                               component="h1"
                               align="center"
                               color="secondary"
-                              className={`font fontBlack fontSize_md`}
+                              className="font fontBlack fontSize_md"
                             >
                               Cards
                             </Typography>
@@ -70,18 +70,18 @@ class Header extends React.Component {
                         ? <InputBase
                             className={classes.SearchInput}
                             placeholder="Search Cards"
-                            inputProps={{ 'aria-label': 'Search Cards' }}
+                            inputProps={{ "aria-label": "Search Cards" }}
                             value={this.state.searchText}
                             onChange={(event) => this.setState({
                               searchText: event.target.value
                             }, () => {
-                              if(this.state.searchText === ''){
-                                searchHandler(null, 'name')
+                              if(this.state.searchText === ""){
+                                searchHandler(null, "name");
                               }
                             } ) }
                             onKeyDown={(event) => {
-                                if(event.key === 'Enter'){
-                                  searchHandler(this.state.searchText, 'name')
+                                if(event.key === "Enter"){
+                                  searchHandler(this.state.searchText, "name");
                                 }
                             } }
                           />
@@ -108,11 +108,17 @@ class Header extends React.Component {
                   </Grid>
                 </MaxWidth>
               </header>
-            )
+            );
           }
         }
       </ThemeConsumer>
     );
   }
 }
+
+Header.propTypes = {
+  componentID: PropTypes.string.isRequired,
+  searchHandler: PropTypes.func
+};
+
 export default Header;

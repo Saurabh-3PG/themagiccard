@@ -34,8 +34,14 @@ class PageWrapper extends React.Component {
     );
   }
 }
+
 PageWrapper.propTypes = {
   componentID: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired, 
+  footerMiddleChild: PropTypes.node, 
+  searchHandler: PropTypes.func.isRequired,
 };
-PageWrapper.contextType = ThemeContext
+
+PageWrapper.contextType = ThemeContext;
+
 export default PageWrapper;

@@ -6,30 +6,32 @@ import {
   Link
 } from "react-router-dom";
 
-const styles = (theme) => ({
+import PropTypes from "prop-types";
+
+const styles = () => ({
   root: {
     maxWidth: "100%",
-    height: '100%'
+    height: "100%"
   },
   card: {
     position: "relative",
     maxWidth: "100%",
     padding: "16px 16px 16px 48px",
-    height: '100%',
-    border: '2px solid rgba(0, 0, 0, 1)'
+    height: "100%",
+    border: "2px solid rgba(0, 0, 0, 1)"
   },
   cardHeading: {
-    borderRight: `1px solid rgba(0, 0, 0, 0.2)`,
-    boxShadow: `0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)`,
+    borderRight: "1px solid rgba(0, 0, 0, 0.2)",
+    boxShadow: "0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)",
   },
   media: {
-    width: `100%`,
+    width: "100%",
     padding: "0px",
     borderRadius: 16,
   },
   mediaImage: {
-    width: `100%`,
-    height: `auto`,
+    width: "100%",
+    height: "auto",
   },
 });
 class IntroCard extends React.Component {
@@ -42,7 +44,7 @@ class IntroCard extends React.Component {
         <Card
           className={`card ${classes.card}`}
           style={{
-            background: $thisContext.theme.background ? $thisContext.theme.background : '#000'
+            background: $thisContext.theme.background ? $thisContext.theme.background : "#000"
           }}
         >
           <Box className={classes.media}>
@@ -90,5 +92,12 @@ class IntroCard extends React.Component {
     );
   }
 }
+
+IntroCard.propTypes = {
+  componentID: PropTypes.string.isRequired,
+  card: PropTypes.array,
+  classes: PropTypes.object,
+};
+
 IntroCard.contextType = ThemeContext;
 export default withStyles(styles)(IntroCard);

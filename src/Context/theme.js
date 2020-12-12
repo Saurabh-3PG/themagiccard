@@ -21,7 +21,8 @@ export const ThemeContext = React.createContext({
   toggleTheme: () => {},
   toggleFilter: () => {}
 });
+
 const ThemeProvider = ThemeContext.Provider;
 const ThemeConsumer = ThemeContext.Consumer;
 
-export { ThemeProvider, ThemeConsumer }
+export { ThemeProvider, ThemeConsumer };

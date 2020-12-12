@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Home from "../Pages/Home";
-import CardDetails from "../Pages/CardDetails"
+import CardDetails from "../Pages/CardDetails";
 
 function PageRoute() {
   return (

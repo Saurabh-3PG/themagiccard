@@ -3,7 +3,7 @@ import { ThemeContext } from "../../Context/theme";
 import { Grid, Typography } from "@material-ui/core";
 import styles from "./index.module.scss";
 import MaxWidth from "../MaxWidth";
-
+import PropTypes from "prop-types";
 class Footer extends React.Component {
   render() {
     const { componentID, footerChildren, footerMiddleChild } = this.props;
@@ -29,10 +29,10 @@ class Footer extends React.Component {
               <Typography
                 component="p"
                 align="left"
-                className={`font fontMedium fontSize_sm`}
+                className="font fontMedium fontSize_sm"
                 color="secondary"
                 display="block"
-                style={{width: '100%'}}
+                style={{width: "100%"}}
               >
                 Designed & Developed by - Saurabh Anand
               </Typography>
@@ -49,5 +49,12 @@ class Footer extends React.Component {
     );
   }
 }
+
+Footer.propTypes = {
+  componentID: PropTypes.string.isRequired,
+  footerChildren: PropTypes.node,
+  footerMiddleChild: PropTypes.node
+};
+
 Footer.contextType = ThemeContext;
 export default Footer;
