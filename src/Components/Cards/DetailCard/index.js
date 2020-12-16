@@ -10,7 +10,6 @@ const DetailCard = (props) => {
   const { componentID, details, lang } = props;
   const uniqueId = componentID + "_DetailCard";
   const basicLand = details && details.rarity === "Basic Land" ? `url(${BASICLAND_BG}) repeat-x bottom` : details && details.rarity === "Special" ? SPECIAL_BG : "none";
-  console.log(lang, 'lang>>>');
   return (
     details ? (
       <Grid 

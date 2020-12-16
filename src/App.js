@@ -44,7 +44,7 @@ class App extends React.Component {
      * Initial State of the App
     */
     this.state = {
-      lang: "English",
+      lang: "French",
       theme: themes.dark,
       isFilterOpen: false,
       toggleLang: this.toggleLang,

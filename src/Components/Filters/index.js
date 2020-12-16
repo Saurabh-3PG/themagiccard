@@ -7,7 +7,7 @@ import CheckBoxIcon from "@material-ui/icons/CheckBox";
 import PropTypes from "prop-types";
 
 const Filters = (props) => {
-  const { componentID, filters, onChangeHandler } = props;
+  const { componentID, filters, onChangeHandler, defaultValue } = props;
   const uniqueID = componentID + "_Filters";
   const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
   const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -24,6 +24,7 @@ const Filters = (props) => {
                   disableCloseOnSelect
                   className="font fontNormal fontSize_sm"
                   getOptionLabel={(value) => value}
+                  defaultValue={defaultValue}
                   onChange={(event, value) => {
                     onChangeHandler(event, value, filter.type);
                   }}
@@ -60,7 +61,8 @@ const Filters = (props) => {
 Filters.propTypes = {
   componentID: PropTypes.string.isRequired,
   filters: PropTypes.array,
-  onChangeHandler: PropTypes.func
+  onChangeHandler: PropTypes.func,
+  defaultValue: PropTypes.any
 };
 
 export default Filters;

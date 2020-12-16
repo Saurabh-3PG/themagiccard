@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Disclaimer app component 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-1 ErrorCard_Disclaimer disclaimer"
+  id="ErrorCard_Disclaimer"
+>
+  <h2
+    className="MuiTypography-root disclaimer_heading MuiTypography-h6 MuiTypography-colorSecondary"
+    id="ErrorCard_Disclaimer_disclaimer_heading"
+  >
+    Disclaimers
+  </h2>
+  <ul
+    className="disclaimers_list"
+    id="ErrorCard_Disclaimer_disclaimers_list"
+  >
+    <li
+      id="ErrorCard_Disclaimer_disclaimer_0"
+    >
+      <span>
+        Default color is "Cyan" - This is being used if no color is coming from API.
+      </span>
+    </li>
+  </ul>
+</div>
+`;

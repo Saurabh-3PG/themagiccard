@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader app component 1`] = `
+<div
+  className="MuiGrid-root Loader_loader loader MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+  id="Loader_loader"
+>
+  <div
+    className="loader_icon_container"
+  >
+    <div
+      className="loader_icon"
+    />
+  </div>
+</div>
+`;

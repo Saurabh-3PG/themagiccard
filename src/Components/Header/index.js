@@ -5,7 +5,7 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import classes from "./index.module.scss";
 import MaxWidth from "../MaxWidth";
 import Switch from "@material-ui/core/Switch";
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 class Header extends React.Component {
   constructor(props) {
@@ -48,6 +48,7 @@ class Header extends React.Component {
                       justify="flex-start"
                     >
                       <DashboardIcon fontSize="default" color="secondary" className={`${classes.DashboardIcon}`} onClick={toggleFilter} />
+                      <BrowserRouter>
                       <Link to="/home" className={`${classes.SiteLogo}`}>
                             <Typography
                               component="h1"
@@ -58,6 +59,7 @@ class Header extends React.Component {
                               Cards
                             </Typography>
                       </Link>
+                      </BrowserRouter>
                     </Grid>
                     <Grid item 
                       xs={7}

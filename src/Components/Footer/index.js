@@ -62,6 +62,7 @@ class Footer extends React.Component {
               <Filter
                 componentID={uniqueId}
                 filters={LANGUAGE}
+                defaultValue={$thisContext.lang}
                 onChangeHandler={(event, value, type) => {
                   $thisContext.toggleLang(value);
                   console.log("onChangeHandler", type);
