@@ -2,11 +2,16 @@
 
 exports[`DetailCard app component 1`] = `
 <div
-  className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start"
+  className="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row-reverse MuiGrid-align-items-xs-flex-start"
   id="pageID_DetailCardEnglish"
+  style={
+    Object {
+      "background": "none",
+    }
+  }
 >
   <div
-    className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center MuiGrid-grid-xs-3"
+    className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-3"
   >
     <div
       className="MuiBox-root MuiBox-root-1 p_md m_before_xxl m_after_lg"
@@ -112,7 +117,7 @@ exports[`DetailCard app component 1`] = `
     </div>
   </div>
   <div
-    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9"
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-8 MuiGrid-grid-md-9 MuiGrid-grid-lg-9"
   >
     <div
       className="MuiBox-root MuiBox-root-2"
@@ -131,7 +136,7 @@ exports[`DetailCard app component 1`] = `
         className="MuiGrid-root p_xs m_before_md MuiGrid-container MuiGrid-align-items-xs-center"
       >
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
         >
           <div
             className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
@@ -154,12 +159,8 @@ exports[`DetailCard app component 1`] = `
             Falls du eine Karte ziehen würdest, kannst du stattdessen Land oder Nichtland bestimmen und Karten oben von deiner Bibliothek aufdecken, bis du eine Karte der bestimmten Art aufdeckst. Nimm diese Karte auf deine Hand und lege alle anderen auf diese Weise aufgedeckten Karten in beliebiger Reihenfolge unter deine Bibliothek.
           </div>
         </div>
-      </div>
-      <div
-        className="MuiGrid-root p_xs m_before_md MuiGrid-container MuiGrid-align-items-xs-center"
-      >
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
         >
           <div
             className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
@@ -182,12 +183,8 @@ exports[`DetailCard app component 1`] = `
             Si fueras a robar una carta, en vez de eso, puedes elegir tierra o no tierra y mostrar cartas de la parte superior de tu biblioteca hasta que muestres una carta del tipo elegido. Pon esa carta en tu mano y pon todas las otras cartas mostradas de esta manera en la parte inferior de tu biblioteca en cualquier orden.
           </div>
         </div>
-      </div>
-      <div
-        className="MuiGrid-root p_xs m_before_md MuiGrid-container MuiGrid-align-items-xs-center"
-      >
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
         >
           <div
             className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
@@ -210,12 +207,8 @@ exports[`DetailCard app component 1`] = `
             Si vous deviez piocher une carte, vous pouvez, à la place, choisir terrain ou non-terrain et révéler des cartes du dessus de votre bibliothèque jusqu'à ce que vous révéliez une carte du type choisi. Mettez cette carte dans votre main, et mettez ensuite toutes les autres cartes révélées de cette manière au-dessous de votre bibliothèque, dans l'ordre de votre choix.
           </div>
         </div>
-      </div>
-      <div
-        className="MuiGrid-root p_xs m_before_md MuiGrid-container MuiGrid-align-items-xs-center"
-      >
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
         >
           <div
             className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
@@ -238,12 +231,8 @@ exports[`DetailCard app component 1`] = `
             Se stai per pescare una carta, puoi invece scegliere terra o non terra e rivelare carte dalla cima del tuo grimorio fino a che non riveli una carta del tipo scelto. Aggiungi quella carta alla tua mano e metti tutte le altre carte rivelate in questo modo in fondo al tuo grimorio in qualsiasi ordine.
           </div>
         </div>
-      </div>
-      <div
-        className="MuiGrid-root p_xs m_before_md MuiGrid-container MuiGrid-align-items-xs-center"
-      >
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
         >
           <div
             className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
@@ -266,12 +255,8 @@ exports[`DetailCard app component 1`] = `
             あなたがカードを１枚引く場合、代わりにあなたは土地か土地でないかを選んでもよい。そうしたなら、あなたのライブラリーの一番上のカードを、選んだ種類のカードが公開されるまで公開し続ける。 そのカードをあなたの手札に加え、これにより公開された他のすべてのカードを望む順番であなたのライブラリーの一番下に置く。
           </div>
         </div>
-      </div>
-      <div
-        className="MuiGrid-root p_xs m_before_md MuiGrid-container MuiGrid-align-items-xs-center"
-      >
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
         >
           <div
             className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
@@ -294,12 +279,8 @@ exports[`DetailCard app component 1`] = `
             Se for comprar um card, em vez disso, você pode escolher se deve ser ou não um terreno, e revelar cards do topo de seu grimório até revelar um card do tipo escolhido. Coloque aquele card em sua mão e coloque todos os outros cards revelados deste modo no fundo de seu grimório em qualquer ordem.
           </div>
         </div>
-      </div>
-      <div
-        className="MuiGrid-root p_xs m_before_md MuiGrid-container MuiGrid-align-items-xs-center"
-      >
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
         >
           <div
             className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
@@ -322,12 +303,8 @@ exports[`DetailCard app component 1`] = `
             Если вы должны взять карту, вместо этого вы можете выбрать "земля" или "неземля" и показывать карты с верха вашей библиотеки до тех пор, пока вы не покажете карту выбранного вида. Положите ту карту в вашу руку и положите все остальные показанные таким образом карты в низ вашей библиотеки в любом порядке.
           </div>
         </div>
-      </div>
-      <div
-        className="MuiGrid-root p_xs m_before_md MuiGrid-container MuiGrid-align-items-xs-center"
-      >
         <div
-          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
         >
           <div
             className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"

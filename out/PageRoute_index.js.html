@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: PageRoute/index.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,42 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: PageRoute/index.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from "react";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import Home from "../Pages/Home";
+import CardDetails from "../Pages/CardDetails";
+/**
+ * function for page routing
+ * @function
+*/
+function PageRoute() {
+  return (
+    &lt;>
+      &lt;BrowserRouter>
+        &lt;Switch>
+          &lt;Route exact path="/" component={Home} />
+          &lt;Redirect exact from="/home" to="/" component={Home} />
+          &lt;Route path="/:slug" component={CardDetails} />
+          &lt;Route path="*" component={() => &lt;h2>404 Not Found&lt;/h2>} />
+        &lt;/Switch>
+      &lt;/BrowserRouter>
+    &lt;/>
+  );
+}
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+export default PageRoute;
+</code></pre>
+        </article>
+    </section>
 
 
 

@@ -2,7 +2,10 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Home from "../Pages/Home";
 import CardDetails from "../Pages/CardDetails";
-
+/**
+ * function for page routing
+ * @function
+*/
 function PageRoute() {
   return (
     <>

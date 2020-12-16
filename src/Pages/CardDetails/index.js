@@ -21,7 +21,7 @@ function CardDetails() {
         dispatch(cleanUp());
     };
   }, [slug, dispatch]);
-
+  console.log("selector>>>", selector);
   return (
     <PageWrapper componentID={pageID}>
       <MaxWidth componentID={pageID} maxWidth={"lg"}>
