@@ -12,7 +12,7 @@ const Filters = (props) => {
   const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
   const checkedIcon = <CheckBoxIcon fontSize="small" />;
   return (
-    <Box id={uniqueID} className={uniqueID}>
+    <Box className={`${uniqueID} filters`} id={uniqueID}>
       {filters && filters.length > 0
         ? filters.map((filter, index) => {
             return (

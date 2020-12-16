@@ -39,7 +39,7 @@ PageWrapper.propTypes = {
   componentID: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired, 
   footerMiddleChild: PropTypes.node, 
-  searchHandler: PropTypes.func.isRequired,
+  searchHandler: PropTypes.func,
 };
 
 PageWrapper.contextType = ThemeContext;

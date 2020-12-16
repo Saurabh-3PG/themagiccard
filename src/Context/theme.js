@@ -16,8 +16,10 @@ export const themes = {
 };
 
 export const ThemeContext = React.createContext({
+  lang: "English",
   isFilterOpen: false,
   theme: themes.dark,
+  toggleLang: () => {},
   toggleTheme: () => {},
   toggleFilter: () => {}
 });

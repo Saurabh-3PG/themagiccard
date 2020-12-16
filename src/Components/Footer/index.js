@@ -4,9 +4,11 @@ import { Grid, Typography } from "@material-ui/core";
 import styles from "./index.module.scss";
 import MaxWidth from "../MaxWidth";
 import PropTypes from "prop-types";
+import Filter from "../Filters";
+import { LANGUAGE } from "../../utility/constants";
 class Footer extends React.Component {
   render() {
-    const { componentID, footerChildren, footerMiddleChild } = this.props;
+    const { componentID, footerMiddleChild } = this.props;
     const uniqueId = componentID + "_footer";
     let $thisContext = this.context;
     return (
@@ -32,16 +34,39 @@ class Footer extends React.Component {
                 className="font fontMedium fontSize_sm"
                 color="secondary"
                 display="block"
-                style={{width: "100%"}}
+                style={{ width: "100%" }}
               >
                 Designed & Developed by - Saurabh Anand
               </Typography>
             </Grid>
-            <Grid container item alignItems="center" justify="center" xs={12} sm={7} md={4}>
+            <Grid
+              container
+              item
+              alignItems="center"
+              justify="center"
+              xs={12}
+              sm={7}
+              md={4}
+            >
               {footerMiddleChild}
             </Grid>
-            <Grid container item xs={12} sm={12} md={4}>
-                {footerChildren}
+            <Grid
+              container
+              item
+              xs={12}
+              sm={12}
+              md={4}
+              alignItems="center"
+              justify="flex-end"
+            >
+              <Filter
+                componentID={uniqueId}
+                filters={LANGUAGE}
+                onChangeHandler={(event, value, type) => {
+                  $thisContext.toggleLang(value);
+                  console.log("onChangeHandler", type);
+                }}
+              />
             </Grid>
           </Grid>
         </MaxWidth>
@@ -52,8 +77,7 @@ class Footer extends React.Component {
 
 Footer.propTypes = {
   componentID: PropTypes.string.isRequired,
-  footerChildren: PropTypes.node,
-  footerMiddleChild: PropTypes.node
+  footerMiddleChild: PropTypes.node,
 };
 
 Footer.contextType = ThemeContext;

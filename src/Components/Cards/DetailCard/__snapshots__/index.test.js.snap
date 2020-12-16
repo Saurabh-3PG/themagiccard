@@ -50,71 +50,6 @@ exports[`DetailCard app component 1`] = `
         Rebecca Guay
       </div>
     </div>
-    <div
-      className="MuiTypography-root font fontMedium fontSize_md p_xl p_before_xxxs p_after_xxxs m_after_xxs m_inline_xxs MuiTypography-body1"
-      style={
-        Object {
-          "background": "#ffffff",
-          "borderRadius": 32,
-          "color": "#000",
-          "display": "inline-block",
-        }
-      }
-    >
-      249
-    </div>
-    <div
-      className="MuiTypography-root font fontMedium fontSize_md p_xl p_before_xxxs p_after_xxxs m_after_xxs m_inline_xxs MuiTypography-body1"
-      style={
-        Object {
-          "background": "#ffffff",
-          "borderRadius": 32,
-          "color": "#000",
-          "display": "inline-block",
-        }
-      }
-    >
-      Enchantment
-    </div>
-    <div
-      className="MuiTypography-root font fontMedium fontSize_md p_xl p_before_xxxs p_after_xxxs m_after_xxs m_inline_xxs MuiTypography-body1"
-      style={
-        Object {
-          "background": "#ffffff",
-          "borderRadius": 32,
-          "color": "#000",
-          "display": "inline-block",
-        }
-      }
-    >
-      10E
-    </div>
-    <div
-      className="MuiTypography-root font fontMedium fontSize_md p_xl p_before_xxxs p_after_xxxs m_after_xxs m_inline_xxs MuiTypography-body1"
-      style={
-        Object {
-          "background": "#ffffff",
-          "borderRadius": 32,
-          "color": "#000",
-          "display": "inline-block",
-        }
-      }
-    >
-      Tenth Edition
-    </div>
-    <div
-      className="MuiTypography-root font fontMedium fontSize_md p_xl p_before_xxxs p_after_xxxs m_after_xxs m_inline_xxs MuiTypography-body1"
-      style={
-        Object {
-          "background": "#ffffff",
-          "borderRadius": 32,
-          "color": "#000",
-          "display": "inline-block",
-        }
-      }
-    >
-      130483
-    </div>
   </div>
   <div
     className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-8 MuiGrid-grid-md-9 MuiGrid-grid-lg-9"
@@ -133,201 +68,77 @@ exports[`DetailCard app component 1`] = `
         If you would draw a card, you may instead choose land or nonland and reveal cards from the top of your library until you reveal a card of the chosen kind. Put that card into your hand and put all other cards revealed this way on the bottom of your library in any order.
       </div>
       <div
-        className="MuiGrid-root p_xs m_before_md MuiGrid-container MuiGrid-align-items-xs-center"
+        className="MuiBox-root MuiBox-root-3 m_before_md m_after_md"
       >
         <div
-          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
+          className="MuiTypography-root font fontMedium fontSize_md p_xl p_before_xxxs p_after_xxxs m_after_xxs m_inline_xxs MuiTypography-body1"
+          style={
+            Object {
+              "background": "#ffffff",
+              "borderRadius": 32,
+              "color": "#000",
+              "display": "inline-block",
+            }
+          }
         >
-          <div
-            className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
-          >
-            German
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            148402
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Überfluss
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Falls du eine Karte ziehen würdest, kannst du stattdessen Land oder Nichtland bestimmen und Karten oben von deiner Bibliothek aufdecken, bis du eine Karte der bestimmten Art aufdeckst. Nimm diese Karte auf deine Hand und lege alle anderen auf diese Weise aufgedeckten Karten in beliebiger Reihenfolge unter deine Bibliothek.
-          </div>
+          249
         </div>
         <div
-          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
+          className="MuiTypography-root font fontMedium fontSize_md p_xl p_before_xxxs p_after_xxxs m_after_xxs m_inline_xxs MuiTypography-body1"
+          style={
+            Object {
+              "background": "#ffffff",
+              "borderRadius": 32,
+              "color": "#000",
+              "display": "inline-block",
+            }
+          }
         >
-          <div
-            className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
-          >
-            Spanish
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            150565
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Abundancia
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Si fueras a robar una carta, en vez de eso, puedes elegir tierra o no tierra y mostrar cartas de la parte superior de tu biblioteca hasta que muestres una carta del tipo elegido. Pon esa carta en tu mano y pon todas las otras cartas mostradas de esta manera en la parte inferior de tu biblioteca en cualquier orden.
-          </div>
+          Enchantment
         </div>
         <div
-          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
+          className="MuiTypography-root font fontMedium fontSize_md p_xl p_before_xxxs p_after_xxxs m_after_xxs m_inline_xxs MuiTypography-body1"
+          style={
+            Object {
+              "background": "#ffffff",
+              "borderRadius": 32,
+              "color": "#000",
+              "display": "inline-block",
+            }
+          }
         >
-          <div
-            className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
-          >
-            French
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            150182
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Abondance
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Si vous deviez piocher une carte, vous pouvez, à la place, choisir terrain ou non-terrain et révéler des cartes du dessus de votre bibliothèque jusqu'à ce que vous révéliez une carte du type choisi. Mettez cette carte dans votre main, et mettez ensuite toutes les autres cartes révélées de cette manière au-dessous de votre bibliothèque, dans l'ordre de votre choix.
-          </div>
+          10E
         </div>
         <div
-          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
+          className="MuiTypography-root font fontMedium fontSize_md p_xl p_before_xxxs p_after_xxxs m_after_xxs m_inline_xxs MuiTypography-body1"
+          style={
+            Object {
+              "background": "#ffffff",
+              "borderRadius": 32,
+              "color": "#000",
+              "display": "inline-block",
+            }
+          }
         >
-          <div
-            className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
-          >
-            Italian
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            148785
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Abbondanza
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Se stai per pescare una carta, puoi invece scegliere terra o non terra e rivelare carte dalla cima del tuo grimorio fino a che non riveli una carta del tipo scelto. Aggiungi quella carta alla tua mano e metti tutte le altre carte rivelate in questo modo in fondo al tuo grimorio in qualsiasi ordine.
-          </div>
+          Tenth Edition
         </div>
         <div
-          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
+          className="MuiTypography-root font fontMedium fontSize_md p_xl p_before_xxxs p_after_xxxs m_after_xxs m_inline_xxs MuiTypography-body1"
+          style={
+            Object {
+              "background": "#ffffff",
+              "borderRadius": 32,
+              "color": "#000",
+              "display": "inline-block",
+            }
+          }
         >
-          <div
-            className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
-          >
-            Japanese
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            148019
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            豊穣
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            あなたがカードを１枚引く場合、代わりにあなたは土地か土地でないかを選んでもよい。そうしたなら、あなたのライブラリーの一番上のカードを、選んだ種類のカードが公開されるまで公開し続ける。 そのカードをあなたの手札に加え、これにより公開された他のすべてのカードを望む順番であなたのライブラリーの一番下に置く。
-          </div>
-        </div>
-        <div
-          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
-        >
-          <div
-            className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
-          >
-            Portuguese (Brazil)
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            149799
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Abundância
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Se for comprar um card, em vez disso, você pode escolher se deve ser ou não um terreno, e revelar cards do topo de seu grimório até revelar um card do tipo escolhido. Coloque aquele card em sua mão e coloque todos os outros cards revelados deste modo no fundo de seu grimório em qualquer ordem.
-          </div>
-        </div>
-        <div
-          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
-        >
-          <div
-            className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
-          >
-            Russian
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            149416
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Изобилие
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            Если вы должны взять карту, вместо этого вы можете выбрать "земля" или "неземля" и показывать карты с верха вашей библиотеки до тех пор, пока вы не покажете карту выбранного вида. Положите ту карту в вашу руку и положите все остальные показанные таким образом карты в низ вашей библиотеки в любом порядке.
-          </div>
-        </div>
-        <div
-          className="MuiGrid-root p_sm MuiGrid-item MuiGrid-grid-xs-6"
-        >
-          <div
-            className="MuiTypography-root font fontBold fontSize_md MuiTypography-body1"
-          >
-            Chinese Simplified
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            147636
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            丰衣足食
-          </div>
-          <div
-            className="MuiTypography-root font fontLight fontSize_md m_before_xs MuiTypography-body1"
-          >
-            若你将抓一张牌，则你可以改为选择地牌或非地牌，并从你牌库顶开始展示牌，直到你展示出一张该种类的牌为止。 将该牌置于你手上，然后将以此法展示的其它牌以任意顺序置于你的牌库底。
-          </div>
+          130483
         </div>
       </div>
+      <div
+        className="MuiGrid-root p_xs m_before_md MuiGrid-container MuiGrid-align-items-xs-center"
+      />
     </div>
   </div>
 </div>

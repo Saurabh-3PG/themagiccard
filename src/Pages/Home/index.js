@@ -118,7 +118,7 @@ class Home extends React.Component {
   render() {
     const pageID = "home";
     const $thisContent = this.context;
-
+    console.log($thisContent, "$thisContent>>");
     return (
       <>
         <PageWrapper
@@ -176,7 +176,7 @@ class Home extends React.Component {
                   if(type === "colors"){
                     this.setFilter( value === NONE_TEXT ? null  : value.map((val) => val) , type );
                   }
-                  else {
+                  else{
                     this.setFilter( value === NONE_TEXT ? null  : value , type );
                   }
                  }} />
@@ -206,7 +206,7 @@ class Home extends React.Component {
                   )}
                 </Grid>
                 <Disclaimer
-                  id={pageID}
+                  componentID={pageID}
                   disclaimers={HOMEPAFE_DISCLAIMER_TEXTS}
                 />
               </Grid>
@@ -235,10 +235,10 @@ const mapDispatchToProps = (dispatch) => {
 
 Home.propTypes = {
   onFetchCards: PropTypes.func,
-  cards: PropTypes.object,
+  cards: PropTypes.array,
   lang: PropTypes.string,
   loading: PropTypes.bool,
-  totalCount: PropTypes.number,
+  totalCount: PropTypes.string,
   filter: PropTypes.object,
 };
 // export default withStyles(styles)(

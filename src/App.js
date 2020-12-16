@@ -35,12 +35,19 @@ class App extends React.Component {
         isFilterOpen: state.isFilterOpen === false ? true : false
       }));
     };
+    this.toggleLang = (lang) => {
+      this.setState({
+        lang: lang
+      });
+    };
     /**
      * Initial State of the App
     */
     this.state = {
+      lang: "English",
       theme: themes.dark,
       isFilterOpen: false,
+      toggleLang: this.toggleLang,
       toggleTheme: this.toggleTheme,
       toggleFilter: this.toggleFilter,
     };

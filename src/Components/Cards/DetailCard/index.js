@@ -10,6 +10,7 @@ const DetailCard = (props) => {
   const { componentID, details, lang } = props;
   const uniqueId = componentID + "_DetailCard";
   const basicLand = details && details.rarity === "Basic Land" ? `url(${BASICLAND_BG}) repeat-x bottom` : details && details.rarity === "Special" ? SPECIAL_BG : "none";
+  console.log(lang, 'lang>>>');
   return (
     details ? (
       <Grid 
@@ -36,6 +37,16 @@ const DetailCard = (props) => {
                 details.artist ? <Typography component="div" className="font fontRegular fontSize_md" style={{color: details.colors[0] ? details.colors[0] === "White" ? "#212121" : "#fff" : "#212121"}}>By: {details.artist}</Typography> : null
             }
             </Box>
+        </Grid>
+        <Grid item xs={12} sm={8} md={9} lg={details.rarity === "Uncommon" ? 10 : 9}>
+            <Box style={{
+                padding: 32
+            }}>
+            {
+                details.text ? <Typography component="div" className="font fontThin m_before_lg fontSize_lg" >{details.text}</Typography> : null
+            }
+            <Box className="m_before_md m_after_md">
+
             {
                 details.number ? <Typography component="div" className="font fontMedium fontSize_md p_xl p_before_xxxs p_after_xxxs m_after_xxs m_inline_xxs" style={{
                     display: "inline-block",
@@ -76,14 +87,8 @@ const DetailCard = (props) => {
                     color: "#000",
                 }}>{details.multiverseid}</Typography> : null
             }
-        </Grid>
-        <Grid item xs={12} sm={8} md={9} lg={details.rarity === "Uncommon" ? 10 : 9}>
-            <Box style={{
-                padding: 32
-            }}>
-            {
-                details.text ? <Typography component="div" className="font fontThin m_before_lg fontSize_lg" >{details.text}</Typography> : null
-            }
+
+            </Box>
             {
                 details.foreignNames && details.foreignNames.length > 0 
                 ? (
@@ -91,25 +96,27 @@ const DetailCard = (props) => {
                         {
                             details.foreignNames.map(
                                 (value, index) => {
-                                    return (
-                                        <Grid item xs={details.rarity === "Common" ? 12 : 6} className="p_sm" key={"_"+index}>
-                                            {
-                                                value.language ? <Typography component="div" className="font fontBold fontSize_md">{value.language}</Typography> : null
-                                            }
-                                            {
-                                                value.multiverseid ? <Typography component="div" className="font fontLight fontSize_md m_before_xs">{value.multiverseid}</Typography> : null
-                                            }
-                                            {
-                                                value.name ? <Typography component="div" className="font fontLight fontSize_md m_before_xs">{value.name}</Typography> : null
-                                            }
-                                            {
-                                                value.flavor ? <Typography component="div" className="font fontLight fontSize_md m_before_xs">{value.flavor}</Typography> : null
-                                            }
-                                            {
-                                                value.text ? <Typography component="div" className="font fontLight fontSize_md m_before_xs">{value.text}</Typography> : null
-                                            }
-                                        </Grid>
-                                    ) ;
+                                    if(lang === value.language){
+                                        return (
+                                            <Grid item xs={details.rarity === "Common" ? 12 : 6} className="p_sm" key={"_"+index}>
+                                                {
+                                                    value.language ? <Typography component="div" className="font fontBold fontSize_md">{value.language}</Typography> : null
+                                                }
+                                                {
+                                                    value.multiverseid ? <Typography component="div" className="font fontLight fontSize_md m_before_xs">{value.multiverseid}</Typography> : null
+                                                }
+                                                {
+                                                    value.name ? <Typography component="div" className="font fontLight fontSize_md m_before_xs">{value.name}</Typography> : null
+                                                }
+                                                {
+                                                    value.flavor ? <Typography component="div" className="font fontLight fontSize_md m_before_xs">{value.flavor}</Typography> : null
+                                                }
+                                                {
+                                                    value.text ? <Typography component="div" className="font fontLight fontSize_md m_before_xs">{value.text}</Typography> : null
+                                                }
+                                            </Grid>
+                                        );
+                                    }
                                 }
                             )
                         }

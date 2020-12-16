@@ -95,7 +95,7 @@ class IntroCard extends React.Component {
 
 IntroCard.propTypes = {
   componentID: PropTypes.string.isRequired,
-  card: PropTypes.array,
+  card: PropTypes.object,
   classes: PropTypes.object,
 };
 

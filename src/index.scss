@@ -47,4 +47,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-
+.footer{
+  .filters{
+      min-width: 300px;
+      margin-top: -12px;
+      label{
+        transform: translate(14px, 12px) scale(1);
+        &[data-shrink="true"]{transform: translate(14px, -4px) scale(0.75);}
+      }
+  }
+}
