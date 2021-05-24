@@ -11,8 +11,8 @@ function PageRoute() {
     <>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Redirect exact from="/home" to="/" component={Home} />
+          <Route exact path="/" render={() => <Home/>} />
+          <Redirect exact from="/home" to="/"/>
           <Route path="/:slug" component={CardDetails} />
           <Route path="*" component={() => <h2>404 Not Found</h2>} />
         </Switch>

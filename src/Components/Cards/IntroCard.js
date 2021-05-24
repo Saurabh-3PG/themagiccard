@@ -39,7 +39,7 @@ class IntroCard extends React.Component {
     const { componentID, card, classes } = this.props;
     const uniqueId = componentID + "_IntroCard";
     let $thisContext = this.context;
-    return (
+    return (card &&
       <Box className={`IntroCard ${classes.root}`} id={uniqueId}>
         <Card
           className={`card ${classes.card}`}
@@ -59,9 +59,9 @@ class IntroCard extends React.Component {
             />
             <Link
               style={{
-                background: card.colors[0] ? card.colors[0] : "cyan",
+                background: card.colors && card.colors[0] ? card.colors[0] : "cyan",
                 color:
-                  card.colors[0] && card.colors[0] !== "White"
+                  card.colors && card.colors[0] && card.colors[0] !== "White"
                     ? "#fff"
                     : "#000",
               }}
