@@ -16,12 +16,8 @@ export const themes = {
 };
 
 export const ThemeContext = React.createContext({
-  lang: "English",
-  isFilterOpen: false,
   theme: themes.dark,
-  toggleLang: () => {},
-  toggleTheme: () => {},
-  toggleFilter: () => {}
+  toggleTheme: () => { /* TODO document why this method 'toggleTheme' is empty */ },
 });
 
 const ThemeProvider = ThemeContext.Provider;

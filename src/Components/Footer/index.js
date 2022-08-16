@@ -6,6 +6,7 @@ import MaxWidth from "../MaxWidth";
 import PropTypes from "prop-types";
 import Filter from "../Filters";
 import { LANGUAGE } from "../../utility/constants";
+import { LangContext } from "../../Context/langContext";
 class Footer extends React.Component {
   render() {
     const { componentID, footerMiddleChild } = this.props;
@@ -59,15 +60,21 @@ class Footer extends React.Component {
               alignItems="center"
               justify="flex-end"
             >
-              <Filter
-                componentID={uniqueId}
-                filters={LANGUAGE}
-                defaultValue={$thisContext.lang}
-                onChangeHandler={(event, value, type) => {
-                  $thisContext.toggleLang(value);
-                  console.log("onChangeHandler", type);
+              <LangContext.Consumer>
+                {({ lang, changeLang }) => {
+                  return <Filter
+                    componentID={uniqueId}
+                    filters={LANGUAGE}
+                    defaultValue={'English'}
+                    value={lang}
+                    onChangeHandler={(event, value, type) => {
+                      changeLang(value);
+                      console.log("onChangeHandler", type);
+                    }}
+                  />
                 }}
-              />
+              </LangContext.Consumer>
+
             </Grid>
           </Grid>
         </MaxWidth>

@@ -1,7 +1,8 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import PageRoute from "./PageRoute";
-import {ThemeProvider, themes} from "./Context/theme";
+import { ThemeProvider, themes } from "./Context/theme";
+import LangContextProvider from "./Context/langContext"
 /**
  * Class representing App
  * @class
@@ -13,6 +14,17 @@ class App extends React.Component {
   */
   constructor(props) {
     super(props);
+    /**
+ * Initial State of the App
+*/
+    this.state = {
+      // lang: "French",
+      theme: themes.dark,
+      // isFilterOpen: false,
+      // toggleLang: this.toggleLang,
+      toggleTheme: this.toggleTheme,
+      // toggleFilter: this.toggleFilter,
+    };
     /**
      * Toggle Theme function
      * Updates the theme from from dark to light and light to dark
@@ -30,33 +42,37 @@ class App extends React.Component {
      * Set state to be true or false
      * Should Aside be open or close
     */
-    this.toggleFilter = () => {
-      this.setState(state => ({
-        isFilterOpen: state.isFilterOpen === false ? true : false
-      }));
-    };
-    this.toggleLang = (lang) => {
-      this.setState({
-        lang: lang
-      });
-    };
+    // this.toggleFilter = () => {
+    //   this.setState(state => ({
+    //     isFilterOpen: state.isFilterOpen === false ? true : false
+    //   }));
+    // };
+    // this.toggleLang = (lang) => {
+    //   this.setState({
+    //     lang: lang
+    //   });
+    // };
     /**
      * Initial State of the App
     */
     this.state = {
-      lang: "French",
+      // lang: "French",
       theme: themes.dark,
-      isFilterOpen: false,
-      toggleLang: this.toggleLang,
+      // isFilterOpen: false,
+      // toggleLang: this.toggleLang,
       toggleTheme: this.toggleTheme,
-      toggleFilter: this.toggleFilter,
+      // toggleFilter: this.toggleFilter,
     };
   }
-  render () {
+  render() {
     return (
       <ThemeProvider value={this.state}>
-        <CssBaseline />
-        <PageRoute />
+        <LangContextProvider>
+          <>
+            <CssBaseline />
+            <PageRoute />
+          </>
+        </LangContextProvider>
       </ThemeProvider>
     );
   }

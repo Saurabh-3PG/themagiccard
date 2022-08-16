@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./PageWrapper.module.scss";
 import Header from "../Header";
 import Footer from "../Footer";
-import {ThemeContext} from "../../Context/theme";
+import { ThemeContext } from "../../Context/theme";
 
 class PageWrapper extends React.Component {
   render() {
@@ -37,8 +37,8 @@ class PageWrapper extends React.Component {
 
 PageWrapper.propTypes = {
   componentID: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired, 
-  footerMiddleChild: PropTypes.node, 
+  children: PropTypes.node.isRequired,
+  footerMiddleChild: PropTypes.node,
   searchHandler: PropTypes.func,
 };
 
